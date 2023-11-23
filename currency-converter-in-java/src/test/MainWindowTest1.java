@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
 
-public class MainWindowTest {
+public class MainWindowTest1 {
     private ArrayList<Currency> currencies = Currency.init();
 
     @Test

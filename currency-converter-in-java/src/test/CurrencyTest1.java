@@ -4,7 +4,7 @@ import currencyConverter.Currency;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CurrencyTest {
+public class CurrencyTest1 {
     @Test
     public void testValidAmountConversion() {
         double amount = 50000.0; // Montant valide
