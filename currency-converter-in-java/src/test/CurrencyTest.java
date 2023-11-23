@@ -1,7 +1,6 @@
 package test;
 
 import currencyConverter.Currency;
-import currencyConverter.MainWindow;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
