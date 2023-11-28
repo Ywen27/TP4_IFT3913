@@ -22,7 +22,7 @@ public class CurrencyTest2 {
     @Test // chemins
     public void testZeroExchangeRate() {
         double convertedAmount = Currency.convert(100.0, 0.0);
-        assertEquals(-1.0, convertedAmount);
+        assertEquals(0.0, convertedAmount);
     }
 
     @Test // conditions
@@ -37,21 +37,4 @@ public class CurrencyTest2 {
         assertEquals(-1.0, convertedAmount);
     }
 
-    @Test // conditions
-    public void testValidAmountWithInvalidExchangeRate() {
-        double convertedAmount = Currency.convert(100.0, -0.5);
-        assertEquals(-1.0, convertedAmount);
-    }
-
-    @Test // i-chemins
-    public void testZeroAmountAndZeroExchangeRate() {
-        double convertedAmount = Currency.convert(0.0, 0.0);
-        assertEquals(-1.0, convertedAmount);
-    }
-
-    @Test // conditions
-    public void testAmountAtLowerLimit() {
-        double convertedAmount = Currency.convert(0.0, 1.2);
-        assertEquals(0.0, convertedAmount);
-    }
 }

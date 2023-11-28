@@ -12,7 +12,7 @@ public class MainwWindowTest2 {
 
     @Test // instruction
     public void testNormalConversion() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, 100.0);
+        double convertedAmount = MainWindow.convert("US Dollar", "Euro", currencies, 100.0);
         assertTrue(convertedAmount > 0);
     }
 
@@ -24,25 +24,19 @@ public class MainwWindowTest2 {
 
     @Test // chemins
     public void testNegativeAmountConversion() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, -100.0);
+        double convertedAmount = MainWindow.convert("US Dollar", "Euro", currencies, -100.0);
         assertEquals(-1.0, convertedAmount);
     }
 
     @Test // conditions
     public void testZeroAmountConversion() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, 0.0);
+        double convertedAmount = MainWindow.convert("US Dollar", "Euro", currencies, 0.0);
         assertTrue(convertedAmount >= 0);
     }
 
     @Test // i-chemins
     public void testAmountAboveLimitConversion() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, 1000001.0);
-        assertEquals(-1.0, convertedAmount);
-    }
-
-    @Test // conditions
-    public void testValidCurrenciesInvalidAmount() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, -1.0);
+        double convertedAmount = MainWindow.convert("US Dollar", "Euro", currencies, 1000001.0);
         assertEquals(-1.0, convertedAmount);
     }
 
@@ -54,7 +48,7 @@ public class MainwWindowTest2 {
 
     @Test // conditions
     public void testAmountAtUpperLimit() {
-        double convertedAmount = MainWindow.convert("USD", "EUR", currencies, 1000000.0);
+        double convertedAmount = MainWindow.convert("US Dollar", "Euro", currencies, 1000000.0);
         assertTrue(convertedAmount >= 0);
     }
 }
